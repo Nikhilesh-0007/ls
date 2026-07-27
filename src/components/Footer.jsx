@@ -67,7 +67,7 @@ export const Footer = () => {
                 <span>United Kingdom (HQ)</span>
               </p>
               <p className="text-slate-400 pl-5 text-xs">
-                70 Arthur Street, Luton, LU1 3SG
+                Arthur Street, Luton, LU1 3SG
               </p>
             </div>
 
