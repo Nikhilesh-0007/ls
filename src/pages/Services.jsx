@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { motion } from 'framer-motion';
 import {
   Users,
   Search,
@@ -20,6 +21,7 @@ import {
 } from 'lucide-react';
 import SectionHeader from '../components/SectionHeader';
 import AnimatedCard from '../components/AnimatedCard';
+import MagneticButton from '../components/MagneticButton';
 
 export const Services = () => {
   // 2 Service Tracks
@@ -163,8 +165,9 @@ export const Services = () => {
           {tracks.map((track, idx) => {
             const IconComponent = track.icon;
             return (
-              <AnimatedCard key={idx} delay={idx * 0.15}>
-                <div className="bg-white rounded-3xl p-8 sm:p-10 border border-slate-100 shadow-soft-md hover:shadow-soft-lg transition-all duration-300 h-full flex flex-col justify-between space-y-8">
+                <AnimatedCard key={idx} delay={idx * 0.15}>
+                <div className="card-hover-glow relative bg-white rounded-3xl p-8 sm:p-10 border border-slate-100 shadow-soft-md h-full flex flex-col justify-between space-y-8 overflow-hidden">
+                  <div className="tilt-shine" />
 
                   <div className="space-y-6">
                     <div className="flex items-center justify-between">
@@ -231,16 +234,23 @@ export const Services = () => {
             {processSteps.map((pStep, idx) => {
               const StepIcon = pStep.icon;
               return (
-                <div key={idx} className="bg-slate-900/60 rounded-2xl p-6 border border-slate-800 space-y-4 relative group">
+                <motion.div
+                  key={idx}
+                  initial={{ opacity: 0, y: 36, scale: 0.95 }}
+                  whileInView={{ opacity: 1, y: 0, scale: 1 }}
+                  viewport={{ once: true, margin: "-50px" }}
+                  transition={{ duration: 0.55, delay: idx * 0.12, ease: [0.22, 1, 0.36, 1] }}
+                  className="card-hover-dark bg-slate-900/60 rounded-2xl p-6 border border-slate-800 space-y-4 relative group"
+                >
                   <div className="flex items-center justify-between">
                     <span className="text-2xl font-serif font-bold text-brand-blue-glow">{pStep.step}</span>
                     <div className="w-10 h-10 rounded-xl bg-slate-800 text-white flex items-center justify-center">
-                      <StepIcon className="w-5 h-5" />
+                      <StepIcon className="w-5 h-5 icon-bounce" />
                     </div>
                   </div>
                   <h3 className="text-xl font-bold font-serif text-white">{pStep.title}</h3>
                   <p className="text-xs text-slate-300 leading-relaxed">{pStep.desc}</p>
-                </div>
+                </motion.div>
               );
             })}
           </div>
@@ -260,8 +270,9 @@ export const Services = () => {
           {industries.map((ind, idx) => {
             const IconComp = ind.icon;
             return (
-              <AnimatedCard key={idx} delay={idx * 0.08}>
-                <div className="bg-white rounded-2xl p-7 border border-slate-100 shadow-soft-sm hover:shadow-soft-md transition-all duration-300 h-full flex flex-col justify-between space-y-4">
+                <AnimatedCard key={idx} delay={idx * 0.08}>
+                <div className="card-hover-glow relative bg-white rounded-2xl p-7 border border-slate-100 shadow-soft-sm h-full flex flex-col justify-between space-y-4 overflow-hidden">
+                  <div className="tilt-shine" />
                   <div className="space-y-4">
                     <div className="flex items-center gap-3">
                       <div className="w-12 h-12 rounded-xl bg-brand-blue/10 text-brand-blue flex items-center justify-center shrink-0">
@@ -306,13 +317,15 @@ export const Services = () => {
             We build bespoke recruitment pipelines tailored to your specific SLAs and budget targets.
           </p>
           <div className="pt-2">
+          <MagneticButton strength={12}>
             <Link
               to="/contact"
-              className="inline-flex items-center gap-2 px-7 py-3.5 text-base font-semibold text-white bg-brand-blue hover:bg-brand-blue-hover rounded-full shadow-soft-md transition-all"
+              className="btn-shimmer inline-flex items-center gap-2 px-7 py-3.5 text-base font-semibold text-white bg-brand-blue hover:bg-brand-blue-hover hover:scale-[1.03] active:scale-[0.98] rounded-full shadow-soft-md transition-all"
             >
               <span>Contact Senior Recruiter</span>
               <ArrowRight className="w-5 h-5" />
             </Link>
+          </MagneticButton>
           </div>
         </div>
       </section>

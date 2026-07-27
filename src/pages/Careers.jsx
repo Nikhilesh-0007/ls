@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { motion } from 'framer-motion';
 import {
   UploadCloud,
   CheckCircle,
@@ -16,6 +17,7 @@ import {
 } from 'lucide-react';
 import SectionHeader from '../components/SectionHeader';
 import AnimatedCard from '../components/AnimatedCard';
+import MagneticButton from '../components/MagneticButton';
 
 export const Careers = () => {
   const [formData, setFormData] = useState({
@@ -329,7 +331,7 @@ export const Careers = () => {
                   <button
                     type="submit"
                     disabled={isSubmitting}
-                    className="w-full py-3.5 px-6 text-base font-semibold text-white bg-brand-blue hover:bg-brand-blue-hover rounded-xl shadow-soft-md hover:shadow-glow-blue transition-all duration-200 flex items-center justify-center gap-2"
+                    className="btn-shimmer w-full py-3.5 px-6 text-base font-semibold text-white bg-brand-blue hover:bg-brand-blue-hover hover:scale-[1.02] active:scale-[0.98] rounded-xl shadow-soft-md hover:shadow-glow-blue transition-all duration-200 flex items-center justify-center gap-2"
                   >
                     {isSubmitting ? (
                       <span>Submitting CV...</span>
@@ -362,8 +364,9 @@ export const Careers = () => {
           {whyWorkWithUs.map((item, idx) => {
             const IconComp = item.icon;
             return (
-              <AnimatedCard key={idx} delay={idx * 0.1}>
-                <div className="bg-white rounded-2xl p-7 border border-slate-100 shadow-soft-sm space-y-4 h-full">
+              <AnimatedCard key={idx} delay={idx * 0.1} tilt>
+                <div className="card-hover-glow relative bg-white rounded-2xl p-7 border border-slate-100 shadow-soft-sm space-y-4 h-full overflow-hidden">
+                  <div className="tilt-shine" />
                   <div className="w-12 h-12 rounded-xl bg-brand-blue/10 text-brand-blue flex items-center justify-center">
                     <IconComp className="w-6 h-6" />
                   </div>
