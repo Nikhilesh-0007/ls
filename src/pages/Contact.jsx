@@ -83,7 +83,7 @@ export const Contact = () => {
                 <span>United Kingdom Headquarters</span>
               </div>
               <div className="space-y-1.5 text-sm text-slate-600 pl-7">
-                <p className="font-semibold text-slate-800">70 Arthur Street, Luton, LU1 3SG</p>
+                <p className="font-semibold text-slate-800">Arthur Street, Luton, LU1 3SG</p>
                 <p>Bedfordshire, United Kingdom</p>
               </div>
             </div>
@@ -339,7 +339,7 @@ export const Contact = () => {
         <SectionHeader
           badge="Headquarters Location"
           title="Find Us in Luton, UK"
-          subtitle="70 Arthur Street, Luton, LU1 3SG, Bedfordshire"
+          subtitle="Arthur Street, Luton, LU1 3SG, Bedfordshire"
         />
 
         <div className="rounded-3xl overflow-hidden shadow-soft-md border border-slate-200 h-[380px] sm:h-[450px] relative bg-slate-100">
