@@ -345,7 +345,7 @@ export const Contact = () => {
         <div className="rounded-3xl overflow-hidden shadow-soft-md border border-slate-200 h-[380px] sm:h-[450px] relative bg-slate-100">
           <iframe
             title="Legacy IT Solutions Office Location Map"
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2459.8839088656114!2d-0.4172825233644173!3d51.88126787189914!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4876484b901a5b8b%3A0xc3c5f6291a134a41!2s70%20Arthur%20St%2C%20Luton%20LU1%203SG%2C%20UK!5e0!3m2!1sen!2suk!4v1700000000000!5m2!1sen!2suk"
+            src=https://maps.app.goo.gl/daxsd8FQcKrVeN1K7?g_st=aw
             width="100%"
             height="100%"
             style={{ border: 0 }}
