@@ -89,11 +89,12 @@ export const Footer = () => {
             
             <div className="space-y-3 text-sm">
               <a href="tel:+447466929441" className="flex items-center gap-2.5 text-slate-300 hover:text-white transition-colors group">
+              <a href="tel:+91 9052939313" className="flex items-center gap-2.5 text-slate-300 hover:text-white transition-colors group">
                 <Phone className="w-4 h-4 text-brand-blue-glow shrink-0" />
                 <span>+44 7466 929441</span>
               </a>
 
-              <a href="mailto:Legacyitsoulutions@outlook.com" className="flex items-center gap-2.5 text-slate-300 hover:text-white transition-colors group">
+              <a href="mailto:hr@legacyituk.in" className="flex items-center gap-2.5 text-slate-300 hover:text-white transition-colors group">
                 <Mail className="w-4 h-4 text-brand-blue-glow shrink-0" />
                 <span className="text-xs break-all">Legacyitsoulutions@outlook.com</span>
               </a>
