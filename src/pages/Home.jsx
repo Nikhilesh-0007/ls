@@ -77,155 +77,134 @@ export const Home = () => {
     <div className="space-y-20 pb-16">
 
       {/* HERO SECTION */}
-      <section className="relative overflow-hidden bg-hero-glow pt-12 lg:pt-20 pb-20 lg:pb-28">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
+<section className="relative overflow-hidden pt-12 lg:pt-20 pb-20 lg:pb-28 min-h-[92vh] flex items-center">
 
-            {/* Left Content Column */}
-            <div className="lg:col-span-7 space-y-6">
+  {/* Background Image */}{/* Background Image */}
+<div className="absolute inset-0 z-0">
+  <img
+    src="/hero_img.jpg"
+    alt="London Tower Bridge"
+    className="w-full h-full object-cover object-right"
+  />
+</div>
 
-              <motion.div
-                initial={{ opacity: 0, y: 15 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5 }}
-                className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-brand-blue/10 border border-brand-blue/20 text-brand-navy text-xs font-semibold"
-              >
-                <span className="w-2 h-2 rounded-full bg-brand-blue animate-pulse"></span>
-                <span>UK & Global Staffing & Executive Search Agency</span>
-              </motion.div>
+{/* Premium Overlay */}
+<div
+  className="absolute inset-0 z-[1]"
+  style={{
+    background: `
+      linear-gradient(
+        90deg,
+        rgba(255,255,255,0.98) 0%,
+        rgba(255,255,255,0.95) 22%,
+        rgba(255,255,255,0.82) 40%,
+        rgba(255,255,255,0.45) 55%,
+        rgba(255,255,255,0.12) 72%,
+        rgba(255,255,255,0.02) 88%,
+        rgba(255,255,255,0) 100%
+      )
+    `,
+  }}
+></div>
 
-              <motion.h1
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.1 }}
-                className="text-4xl sm:text-5xl lg:text-6xl font-serif font-bold text-brand-navy leading-[1.12] tracking-tight"
-              >
-                Connecting Businesses with the <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-navy via-brand-blue to-brand-blue-glow">Right Talent</span>
-              </motion.h1>
+{/* Blue Light */}
+<div
+  className="absolute inset-0 z-[2]"
+  style={{
+    background: `
+      radial-gradient(
+        circle at top left,
+        rgba(37,99,235,0.10),
+        transparent 45%
+      )
+    `,
+  }}
+></div>
 
-              <motion.p
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.2 }}
-                className="text-lg sm:text-xl text-slate-600 font-sans leading-relaxed max-w-2xl"
-              >
-                Legacy IT Solutions provides tailored staffing solutions across <strong className="text-brand-navy font-semibold">IT, Engineering, Healthcare, Finance, Administration, and Customer Service</strong>. We act as your dedicated sourcing partner, delivering precision-matched professionals who drive long-term business growth.
-              </motion.p>
+<div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+    <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
 
-              {/* Tagline Statement */}
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.25 }}
-                className="text-sm font-semibold text-brand-silver-muted tracking-widest uppercase flex items-center gap-3 pt-1"
-              >
-                <span className="w-8 h-px bg-brand-blue/40"></span>
-                <span>People. Solutions. Legacy.</span>
-              </motion.div>
+      {/* Left Content Column */}
+      <div className="lg:col-span-7 space-y-6">
 
-              {/* Action Buttons */}
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.3 }}
-                className="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 pt-4"
-              >
-                <Link
-                  to="/contact"
-                  className="inline-flex items-center justify-center gap-2 px-7 py-3.5 text-base font-semibold text-white bg-brand-blue hover:bg-brand-blue-hover rounded-full shadow-soft-md hover:shadow-glow-blue transition-all duration-200"
-                >
-                  <span>Request Staffing / Hire Talent</span>
-                  <ArrowRight className="w-5 h-5" />
-                </Link>
+        <motion.div
+          initial={{ opacity: 0, y: 15 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
+          className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-brand-blue/10 border border-brand-blue/20 text-brand-navy text-xs font-semibold backdrop-blur-md"
+        >
+          <span className="w-2 h-2 rounded-full bg-brand-blue animate-pulse"></span>
+          <span>UK & Global Staffing & Executive Search Agency</span>
+        </motion.div>
 
-                <Link
-                  to="/careers"
-                  className="inline-flex items-center justify-center gap-2 px-7 py-3.5 text-base font-semibold text-brand-navy bg-white hover:bg-slate-50 border border-slate-200 rounded-full shadow-soft-sm transition-all duration-200"
-                >
-                  <Briefcase className="w-4 h-4 text-brand-blue" />
-                  <span>Submit Your CV</span>
-                </Link>
-              </motion.div>
+        <motion.h1
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.1 }}
+          className="text-4xl sm:text-5xl lg:text-6xl font-serif font-bold text-brand-navy leading-[1.1] tracking-tight"
+        >
+          Connecting Businesses with the{" "}
+          <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-navy via-brand-blue to-brand-blue-glow">
+            Right Talent
+          </span>
+        </motion.h1>
 
-            </div>
+        <motion.p
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.2 }}
+          className="text-lg sm:text-xl text-slate-700 leading-relaxed max-w-2xl"
+        >
+          Legacy IT Solutions provides tailored staffing solutions across{" "}
+          <strong className="text-brand-navy">
+            IT, Engineering, Healthcare, Finance, Administration, and Customer
+            Service
+          </strong>
+          . We act as your dedicated sourcing partner, delivering
+          precision-matched professionals who drive long-term business growth.
+        </motion.p>
 
-            {/* Right Graphic / Interactive Card Stack Column */}
-            <div className="lg:col-span-5 relative">
-              <motion.div
-                initial={{ opacity: 0, scale: 0.95 }}
-                animate={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.7, delay: 0.2 }}
-                className="relative bg-white rounded-3xl p-8 shadow-soft-lg border border-slate-100/90 space-y-6"
-              >
-                {/* Visual Header */}
-                <div className="flex items-center justify-between border-b border-slate-100 pb-5">
-                  <div className="flex items-center gap-3">
-                    <div className="w-12 h-12 rounded-2xl bg-brand-blue/10 flex items-center justify-center text-brand-blue">
-                      <Users className="w-6 h-6" />
-                    </div>
-                    <div>
-                      <h3 className="font-semibold text-brand-navy text-base">Talent Match Pipeline</h3>
-                      <p className="text-xs text-slate-500">Live Recruiter Match Rate</p>
-                    </div>
-                  </div>
-                  <span className="px-3 py-1 bg-emerald-50 text-emerald-700 text-xs font-bold rounded-full border border-emerald-100">
-                    98.4% Accuracy
-                  </span>
-                </div>
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.25 }}
+          className="text-sm font-semibold text-brand-silver-muted tracking-widest uppercase flex items-center gap-3"
+        >
+          <span className="w-8 h-px bg-brand-blue/40"></span>
+          <span>People. Solutions. Legacy.</span>
+        </motion.div>
 
-                {/* Mini Metric Cards */}
-                <div className="grid grid-cols-2 gap-4">
-                  <div className="p-4 rounded-2xl bg-brand-bg border border-slate-100 space-y-1">
-                    <div className="flex items-center text-brand-blue gap-1.5 text-xs font-semibold">
-                      <Clock className="w-4 h-4" />
-                      <span>Speed to Hire</span>
-                    </div>
-                    <p className="text-2xl font-bold font-serif text-brand-navy">48 Hours</p>
-                    <p className="text-[11px] text-slate-500">Initial shortlist delivery</p>
-                  </div>
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.3 }}
+          className="flex flex-col sm:flex-row gap-4 pt-3"
+        >
+          <Link
+            to="/contact"
+            className="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-full bg-brand-blue text-white font-semibold hover:bg-brand-blue-hover transition-all shadow-xl"
+          >
+            Request Staffing / Hire Talent
+            <ArrowRight className="w-5 h-5" />
+          </Link>
 
-                  <div className="p-4 rounded-2xl bg-brand-bg border border-slate-100 space-y-1">
-                    <div className="flex items-center text-brand-blue gap-1.5 text-xs font-semibold">
-                      <TrendingUp className="w-4 h-4" />
-                      <span>Retention</span>
-                    </div>
-                    <p className="text-2xl font-bold font-serif text-brand-navy">96%+</p>
-                    <p className="text-[11px] text-slate-500">12-month placement success</p>
-                  </div>
-                </div>
+          <Link
+            to="/careers"
+            className="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-full bg-white border border-slate-200 font-semibold text-brand-navy hover:bg-slate-50 transition-all shadow-lg"
+          >
+            <Briefcase className="w-5 h-5 text-brand-blue" />
+            Submit Your CV
+          </Link>
+        </motion.div>
 
-                {/* Sourcing Specializations Chip List */}
-                <div className="space-y-2 pt-2">
-                  <p className="text-xs font-semibold text-slate-400 uppercase tracking-wider">Active Domain Talent Pools</p>
-                  <div className="flex flex-wrap gap-2">
-                    {['IT Infrastructure', 'Cloud Engineers', 'Healthcare Admins', 'Senior Financial Auditors', 'Customer Success Leads', 'Mechanical Engineers'].map((chip, idx) => (
-                      <span key={idx} className="px-3 py-1 rounded-lg bg-slate-100/80 text-xs font-medium text-slate-700">
-                        {chip}
-                      </span>
-                    ))}
-                  </div>
-                </div>
+      </div>
 
-                {/* Contact Quick Callout */}
-                <div className="pt-2 border-t border-slate-100 flex items-center justify-between text-xs">
-                  <span className="text-slate-500">Need urgent staffing?</span>
-                  <a href={whatsappUrl} target="_blank" rel="noopener noreferrer" className="text-brand-blue font-semibold hover:underline inline-flex items-center gap-1">
-                    <MessageSquare className="w-3.5 h-3.5 text-emerald-600" />
-                    <span>WhatsApp Immediate Response</span>
-                  </a>
-                </div>
+      {/* KEEP YOUR EXISTING RIGHT CARD HERE WITHOUT CHANGING ANYTHING */}
 
-              </motion.div>
+    </div>
+  </div>
 
-              {/* Decorative Subtle Background Orbs */}
-              <div className="absolute -top-10 -right-10 w-64 h-64 bg-brand-blue/10 rounded-full blur-3xl -z-10 pointer-events-none"></div>
-              <div className="absolute -bottom-10 -left-10 w-64 h-64 bg-brand-navy/5 rounded-full blur-3xl -z-10 pointer-events-none"></div>
-            </div>
-
-          </div>
-        </div>
-      </section>
-
+</section>
       {/* TRUST INDICATORS STRIP */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="bg-white rounded-3xl p-8 sm:p-10 shadow-soft-md border border-slate-100/90 grid grid-cols-2 md:grid-cols-4 gap-8">

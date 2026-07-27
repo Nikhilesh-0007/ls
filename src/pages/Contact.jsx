@@ -102,28 +102,54 @@ export const Contact = () => {
 
             {/* Contact Phone & Email */}
             <div className="bg-white rounded-2xl p-6 border border-slate-100 shadow-soft-sm space-y-4">
-              <h4 className="font-semibold text-brand-navy text-sm uppercase tracking-wider">Direct Contacts</h4>
+  <h4 className="font-semibold text-brand-navy text-sm uppercase tracking-wider">
+    Direct Contacts
+  </h4>
 
-              <a href="tel:+447466929441" className="flex items-center gap-3 text-slate-700 hover:text-brand-blue transition-colors group">
-                <div className="w-10 h-10 rounded-xl bg-brand-bg group-hover:bg-brand-blue/10 text-brand-blue flex items-center justify-center">
-                  <Phone className="w-5 h-5" />
-                </div>
-                <div>
-                  <p className="text-xs text-slate-400 font-semibold">Phone / WhatsApp</p>
-                  <p className="text-base font-bold text-brand-navy">+44 7466 929441</p>
-                </div>
-              </a>
+  {/* UK Phone */}
+  <a
+    href="tel:+447466929441"
+    className="flex items-center gap-3 text-slate-700 hover:text-brand-blue transition-colors group"
+  >
+    <div className="w-10 h-10 rounded-xl bg-brand-bg group-hover:bg-brand-blue/10 text-brand-blue flex items-center justify-center">
+      <Phone className="w-5 h-5" />
+    </div>
+    <div>
+      <p className="text-xs text-slate-400 font-semibold">UK Phone / WhatsApp</p>
+      <p className="text-base font-bold text-brand-navy">+44 7466 929441</p>
+    </div>
+  </a>
 
-              <a href="mailto:Legacyitsoulutions@outlook.com" className="flex items-center gap-3 text-slate-700 hover:text-brand-blue transition-colors group">
-                <div className="w-10 h-10 rounded-xl bg-brand-bg group-hover:bg-brand-blue/10 text-brand-blue flex items-center justify-center">
-                  <Mail className="w-5 h-5" />
-                </div>
-                <div>
-                  <p className="text-xs text-slate-400 font-semibold">Official Email</p>
-                  <p className="text-sm font-semibold text-brand-navy break-all">Legacyitsoulutions@outlook.com</p>
-                </div>
-              </a>
-            </div>
+  {/* India Phone */}
+  <a
+    href="tel:+919052939313"
+    className="flex items-center gap-3 text-slate-700 hover:text-brand-blue transition-colors group"
+  >
+    <div className="w-10 h-10 rounded-xl bg-brand-bg group-hover:bg-brand-blue/10 text-brand-blue flex items-center justify-center">
+      <Phone className="w-5 h-5" />
+    </div>
+    <div>
+      <p className="text-xs text-slate-400 font-semibold">India Phone / WhatsApp</p>
+      <p className="text-base font-bold text-brand-navy">+91 90529 39313</p>
+    </div>
+  </a>
+
+  {/* Email */}
+  <a
+    href="mailto:hr@legacyituk.in"
+    className="flex items-center gap-3 text-slate-700 hover:text-brand-blue transition-colors group"
+  >
+    <div className="w-10 h-10 rounded-xl bg-brand-bg group-hover:bg-brand-blue/10 text-brand-blue flex items-center justify-center">
+      <Mail className="w-5 h-5" />
+    </div>
+    <div>
+      <p className="text-xs text-slate-400 font-semibold">Email</p>
+      <p className="text-sm font-semibold text-brand-navy break-all">
+        hr@legacyituk.in
+      </p>
+    </div>
+  </a>
+</div>
 
             {/* Business Hours */}
             <div className="bg-white rounded-2xl p-6 border border-slate-100 shadow-soft-sm space-y-3">

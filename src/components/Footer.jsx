@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { MapPin, Phone, Mail, Clock, ArrowUpRight, Linkedin, Twitter, Facebook, Globe } from 'lucide-react';
+import { MapPin, Phone, Mail, Clock, ArrowUpRight, Linkedin, Twitter, Instagram, Globe } from 'lucide-react';
 import Logo from './Logo';
 
 export const Footer = () => {
@@ -30,17 +30,11 @@ export const Footer = () => {
 
             {/* Social Links Placeholder */}
             <div className="flex items-center space-x-3 pt-2">
-              <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="p-2 rounded-full bg-slate-800 text-slate-300 hover:text-white hover:bg-brand-blue transition-colors" aria-label="LinkedIn">
+              <a href="https://www.linkedin.com/in/legacy-it-solutions-3a62a3425/" target="_blank" rel="noopener noreferrer" className="p-2 rounded-full bg-slate-800 text-slate-300 hover:text-white hover:bg-brand-blue transition-colors" aria-label="LinkedIn">
                 <Linkedin className="w-4 h-4" />
               </a>
-              <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="p-2 rounded-full bg-slate-800 text-slate-300 hover:text-white hover:bg-brand-blue transition-colors" aria-label="Twitter">
-                <Twitter className="w-4 h-4" />
-              </a>
-              <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="p-2 rounded-full bg-slate-800 text-slate-300 hover:text-white hover:bg-brand-blue transition-colors" aria-label="Facebook">
-                <Facebook className="w-4 h-4" />
-              </a>
-              <a href="mailto:Legacyitsoulutions@outlook.com" className="p-2 rounded-full bg-slate-800 text-slate-300 hover:text-white hover:bg-brand-blue transition-colors" aria-label="Email">
-                <Mail className="w-4 h-4" />
+              <a href="https://www.instagram.com/legacy_it_uk/" target="_blank"  rel="noopener noreferrer"  className="p-2 rounded-full bg-slate-800 text-slate-300 hover:text-white hover:bg-brand-blue transition-colors"  aria-label="Instagram">
+                <Instagram className="w-4 h-4" />
               </a>
             </div>
           </div>
