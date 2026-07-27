@@ -345,7 +345,7 @@ export const Contact = () => {
         <div className="rounded-3xl overflow-hidden shadow-soft-md border border-slate-200 h-[380px] sm:h-[450px] relative bg-slate-100">
           <iframe
             title="Legacy IT Solutions Office Location Map"
-            src=https://maps.app.goo.gl/daxsd8FQcKrVeN1K7?g_st=aw
+            src="https://maps.app.goo.gl/daxsd8FQcKrVeN1K7?g_st=aw"
             width="100%"
             height="100%"
             style={{ border: 0 }}
