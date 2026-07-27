@@ -30,7 +30,7 @@ export const Footer = () => {
 
             {/* Social Links Placeholder */}
             <div className="flex items-center space-x-3 pt-2">
-              <a href="https://www.linkedin.com/in/legacy-it-solutions-3a62a3425/" target="_blank" rel="noopener noreferrer" className="p-2 rounded-full bg-slate-800 text-slate-300 hover:text-white hover:bg-brand-blue transition-colors" aria-label="LinkedIn">
+              <a href="https://www.linkedin.com/company/legacy-it-solutions-uk/about/" target="_blank" rel="noopener noreferrer" className="p-2 rounded-full bg-slate-800 text-slate-300 hover:text-white hover:bg-brand-blue transition-colors" aria-label="LinkedIn">
                 <Linkedin className="w-4 h-4" />
               </a>
               <a href="https://www.instagram.com/legacy_it_uk/" target="_blank"  rel="noopener noreferrer"  className="p-2 rounded-full bg-slate-800 text-slate-300 hover:text-white hover:bg-brand-blue transition-colors"  aria-label="Instagram">
