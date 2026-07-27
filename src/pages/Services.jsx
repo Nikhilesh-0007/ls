@@ -84,11 +84,7 @@ export const Services = () => {
 
   // 7 Industry Grids
   const industries = [
-    {
-      name: 'IT & Technology',
-      icon: Cpu,
-      roles: ['Software Engineers & Developers', 'Cloud & DevOps Architects', 'Cybersecurity Specialists', 'Data Engineers & Analysts', 'IT Support & Systems Admins']
-    },
+    
     {
       name: 'Engineering',
       icon: Wrench,
@@ -118,6 +114,26 @@ export const Services = () => {
       name: 'Other Specialist Roles',
       icon: Sparkles,
       roles: ['Supply Chain & Logistics Leads', 'Procurement Officers', 'Legal & Compliance Specialists', 'Marketing & Communications', 'Tailored Custom Staffing']
+    },
+    {
+      name: 'IT & Technology',
+      icon: Cpu,
+      roles: [
+  'Software Engineers & Developers',
+  'SAP Consultants & Developers',
+  'Oracle ERP & Cloud Consultants',
+  'Data Engineers',
+  'Data Analysts',
+  'Business Analysts',
+  'Cloud & DevOps Engineers',
+  'Cybersecurity Specialists',
+  'AI & Machine Learning Engineers',
+  'Full Stack Developers',
+  'Frontend & Backend Developers',
+  'Database Administrators (SQL/Oracle)',
+  'IT Support & Systems Admins',
+  'Network & Infrastructure Engineers'
+]
     },
   ];
 
