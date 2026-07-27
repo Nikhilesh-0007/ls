@@ -4,6 +4,7 @@ import { motion } from 'framer-motion';
 import { Users, Target, Shield, HeartHandshake, Zap, ArrowRight, Award, CheckCircle } from 'lucide-react';
 import SectionHeader from '../components/SectionHeader';
 import AnimatedCard from '../components/AnimatedCard';
+import MagneticButton from '../components/MagneticButton';
 
 export const About = () => {
   const values = [
@@ -164,7 +165,13 @@ export const About = () => {
 
       {/* VISUAL STATEMENT TAGLINE BANNER */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="relative bg-gradient-to-r from-brand-navy via-[#102A56] to-brand-navy rounded-3xl p-12 sm:p-16 text-center text-white shadow-soft-lg space-y-6 overflow-hidden">
+        <motion.div
+          initial={{ opacity: 0, scale: 0.97, y: 24 }}
+          whileInView={{ opacity: 1, scale: 1, y: 0 }}
+          viewport={{ once: true, margin: "-60px" }}
+          transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
+          className="relative bg-gradient-to-r from-brand-navy via-[#102A56] to-brand-navy rounded-3xl p-12 sm:p-16 text-center text-white shadow-soft-lg space-y-6 overflow-hidden"
+        >
 
           <span className="text-xs font-semibold uppercase tracking-widest text-brand-blue-glow bg-slate-800/80 px-4 py-1.5 rounded-full border border-slate-700">
             Brand Identity
@@ -180,7 +187,7 @@ export const About = () => {
 
           {/* Decorative orb */}
           <div className="absolute -bottom-20 -right-20 w-80 h-80 bg-brand-blue/20 rounded-full blur-3xl pointer-events-none"></div>
-        </div>
+        </motion.div>
       </section>
 
       {/* CORE VALUES */}
@@ -195,8 +202,9 @@ export const About = () => {
           {values.map((val, idx) => {
             const IconComponent = val.icon;
             return (
-              <AnimatedCard key={idx} delay={idx * 0.1}>
-                <div className="bg-white rounded-2xl p-8 border border-slate-100 shadow-soft-sm hover:shadow-soft-md transition-all duration-300 flex items-start gap-5">
+              <AnimatedCard key={idx} delay={idx * 0.1} tilt>
+                <div className="card-hover-glow relative bg-white rounded-2xl p-8 border border-slate-100 shadow-soft-sm flex items-start gap-5 overflow-hidden">
+                  <div className="tilt-shine" />
                   <div className="w-12 h-12 rounded-2xl bg-brand-blue/10 text-brand-blue flex items-center justify-center shrink-0">
                     <IconComponent className="w-6 h-6" />
                   </div>
@@ -217,13 +225,15 @@ export const About = () => {
           Ready to Experience the Legacy Difference?
         </h3>
         <div className="flex items-center justify-center gap-4">
+          <MagneticButton strength={12}>
           <Link
             to="/contact"
-            className="inline-flex items-center gap-2 px-7 py-3.5 text-base font-semibold text-white bg-brand-blue hover:bg-brand-blue-hover rounded-full shadow-soft-md transition-all"
+            className="btn-shimmer inline-flex items-center gap-2 px-7 py-3.5 text-base font-semibold text-white bg-brand-blue hover:bg-brand-blue-hover hover:scale-[1.03] active:scale-[0.98] rounded-full shadow-soft-md transition-all"
           >
             <span>Partner With Us</span>
             <ArrowRight className="w-5 h-5" />
           </Link>
+          </MagneticButton>
         </div>
       </section>
 

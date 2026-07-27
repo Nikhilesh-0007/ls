@@ -313,7 +313,7 @@ export const Contact = () => {
                   <button
                     type="submit"
                     disabled={isSubmitting}
-                    className="w-full py-3.5 px-6 text-base font-semibold text-white bg-brand-blue hover:bg-brand-blue-hover rounded-xl shadow-soft-md hover:shadow-glow-blue transition-all duration-200 flex items-center justify-center gap-2"
+                    className="btn-shimmer w-full py-3.5 px-6 text-base font-semibold text-white bg-brand-blue hover:bg-brand-blue-hover hover:scale-[1.02] active:scale-[0.98] rounded-xl shadow-soft-md hover:shadow-glow-blue transition-all duration-200 flex items-center justify-center gap-2"
                   >
                     {isSubmitting ? (
                       <span>Sending Message...</span>
