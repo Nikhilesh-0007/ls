@@ -100,7 +100,7 @@ export const Footer = () => {
 
               <a href="mailto:hr@legacyituk.in" className="flex items-center gap-2.5 text-slate-300 hover:text-white transition-colors group">
                 <Mail className="w-4 h-4 text-brand-blue-glow shrink-0" />
-                <span className="text-xs break-all">Legacyitsoulutions@outlook.com</span>
+                <span className="text-xs break-all">hr@legacyituk.in</span>
               </a>
 
               <div className="flex items-start gap-2.5 text-xs text-slate-400 pt-1">
