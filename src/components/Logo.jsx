@@ -16,16 +16,13 @@ export const Logo = ({ className = "h-11", showText = true, variant = "default" 
         className="h-full w-auto object-contain shrink-0"
       />
 
-      {/* Brand Text */}
+      {/* Brand Text Image */}
       {showText && (
-        <div className="flex flex-col justify-center leading-none">
-          <span className={`font-serif tracking-tight font-bold text-xl sm:text-2xl ${isDarkFooter ? 'text-white' : 'text-brand-navy'}`}>
-            LEGACY <span className="text-brand-blue font-sans font-light">IT</span>
-          </span>
-          <span className={`text-[10px] sm:text-xs font-semibold tracking-[0.22em] uppercase mt-1 ${isDarkFooter ? 'text-slate-400' : 'text-brand-silver-muted'}`}>
-            Solutions
-          </span>
-        </div>
+        <img
+          src="/logo_text.png"
+          alt="Legacy IT Solutions"
+          className={`h-full w-auto object-contain shrink-0 ${isDarkFooter ? 'brightness-0 invert' : ''}`}
+        />
       )}
     </div>
   );
