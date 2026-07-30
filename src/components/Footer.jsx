@@ -117,7 +117,12 @@ export const Footer = () => {
 
         {/* Bottom Copyright & Disclaimer */}
         <div className="pt-8 flex flex-col md:flex-row items-center justify-between text-xs text-slate-500 gap-4">
-          <p>© {currentYear} Legacy IT Solutions. All rights reserved. Registered Staffing & Recruitment Agency in the UK.</p>
+          <p className="text-center md:text-left leading-relaxed">
+            © {currentYear} Legacy IT Solutions. All rights reserved. Registered Staffing & Recruitment Agency in the UK.
+            <span className="block md:inline mt-1 md:mt-0 md:ml-1">
+              Developed by <a href="https://www.instagram.com/staffarc?igsh=NGI1ajBjank5aWF3" target="_blank" rel="noopener noreferrer" className="hover:text-slate-350 text-slate-400 font-medium transition-colors">StaffArc</a>.
+            </span>
+          </p>
           <div className="flex items-center space-x-6">
             <Link to="/contact" className="hover:text-slate-400 transition-colors">Privacy Policy</Link>
             <Link to="/contact" className="hover:text-slate-400 transition-colors">Terms of Business</Link>
